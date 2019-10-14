@@ -1,5 +1,5 @@
 {
-  "name": "orientation-service",
+  "name": "@kogp/orientation-service",
   "version": "1.0.0",
   "description": "Want to keep your users in landscape mode? This package will handle it all for you",
   "main": "src/service.js",
