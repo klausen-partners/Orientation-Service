@@ -1,0 +1,19 @@
+{
+  "name": "orientation-service",
+  "version": "1.0.0",
+  "description": "Want to keep your users in landscape mode? This package will handle it all for you",
+  "main": "src/service.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klausen-partners/Orientation-Service.git"
+  },
+  "keywords": [
+    "orientation"
+  ],
+  "author": "Klausen + Partners",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/klausen-partners/Orientation-Service/issues"
+  },
+  "homepage": "https://github.com/klausen-partners/Orientation-Service#readme"
+}
