@@ -15,6 +15,9 @@ const orientationService = (options) => {
             const devMode = (consoleType, msg) => {
                 if (options.devMode) {
                     switch (consoleType) {
+                        case 'error':
+                            console.error(msg);
+                            break;
                         case 'log':
                             console.log(msg);
                             break;
@@ -30,10 +33,18 @@ const orientationService = (options) => {
                 if (options.mobileOnly === true) {
                     devMode('info', 'Mobil mode only activated - Checking device type');
                     if (checkDeviceType())
-                        startService(overlay);
+                        try {
+                            startService(overlay);
+                        } catch (e){
+                            devMode('error', e);
+                        }
                 } else {
                     devMode('info', 'Mobile mode only disabled - Starting Service');
-                    startService(overlay);
+                    try {
+                        startService(overlay);
+                    } catch (e) {
+                        devMode('error', e);
+                    }
                 }
             };
             const startService = (overlay) => {
@@ -42,7 +53,6 @@ const orientationService = (options) => {
                 if (options.landscapePages.includes(path) && isLandscape()) {
                     devMode('log', 'This page requires landscape and is in landscape');
                     overlay.style.display = "none";
-                    return true;
                 } else if (options.landscapePages.includes(path) && !isLandscape()) {
                     devMode('log', 'Overlay activated');
                     overlay.style.display = "flex";
