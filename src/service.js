@@ -22,10 +22,10 @@ const orientationService = (options) => {
                             console.log(msg);
                             break;
                         case 'info':
-                            console.log(msg);
+                            console.info(msg);
                             break;
                         default:
-                            break;
+                            throw new Error('devMode experienced unexpected behavior. Please create an issue on Github');
                     }
                 }
             };

@@ -5,8 +5,8 @@
 ![GitHub](https://img.shields.io/github/license/klausen-partners/orientation-service)
 ![npm (tag)](https://img.shields.io/npm/v/@kogp/orientation-service/latest)
 
-Want to keep your users in landscape mode? This package will handle it all for you.
-[1.5~KB](https://bundlephobia.com/result?p=@kogp/orientation-service@1.0.0) Simple package with good no dependencies and no nonsense.
+Want to keep your users in landscape mode? This package will handle it all for you in only a few steps.
+[1.5~KB](https://bundlephobia.com/result?p=@kogp/orientation-service@1.0.0) Simple package with no dependencies and no nonsense.
 
 ![Demo](https://media.giphy.com/media/hs1kmYqXhTVUggDaSR/giphy.gif)
 
@@ -36,7 +36,7 @@ Place the following code snippet inside the `<body>` tag before the `</body>` ta
 
 ## Javascript:
 ```js
-import { orientationService } from 'orientation-service';
+import { orientationService } from '@kogp/orientation-service';
 
 orientationService({
         landscapePages: ['/Orientation-Service/demo/index.html'],
