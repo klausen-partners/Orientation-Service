@@ -1,19 +1,21 @@
 {
   "name": "@kogp/orientation-service",
   "version": "1.0.3",
-  "description": "Want to keep your users in landscape mode? This package will handle it all for you",
+  "description": "Want to keep your users in landscape mode? This package will handle it all for you in only a few steps",
   "main": "src/service.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/klausen-partners/Orientation-Service.git"
   },
   "keywords": [
-    "orientation"
+    "orientation",
+    "serivce",
+    "orientation-service"
   ],
   "author": "Klausen + Partners",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/klausen-partners/Orientation-Service/issues"
   },
-  "homepage": "https://github.com/klausen-partners/Orientation-Service#readme"
+  "homepage": "https://klausenogpartners.dk"
 }
