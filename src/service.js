@@ -65,7 +65,7 @@ const orientationService = (options) => {
             };
             const setOverlayStyling = (elm) => {
                 elm.style.display = "none";
-                elm.style.position = "absolute";
+                elm.style.position = "fixed";
                 elm.style.left = "0";
                 elm.style.top = "0";
                 elm.style.width = "100%";
