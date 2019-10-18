@@ -69,7 +69,7 @@ const orientationService = (options) => {
                 elm.style.left = "0";
                 elm.style.top = "0";
                 elm.style.width = "100%";
-                elm.style.height = "100vh";
+                elm.style.height = "100%";
                 elm.style.background = options.bgColor;
             };
             const checkDeviceType = () => {
