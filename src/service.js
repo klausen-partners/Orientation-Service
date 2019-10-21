@@ -61,7 +61,11 @@ const orientationService = (options) => {
                 }
             };
             const isLandscape = () => {
-                return orientation === 90 || orientation === 270;
+                if (checkIphone()) {
+                    return orientation === 90 || orientation === -90;
+                } else {
+                    return orientation === 90 || orientation === 270;
+                }
             };
             const setOverlayStyling = (elm) => {
                 elm.style.display = "none";
@@ -76,15 +80,27 @@ const orientationService = (options) => {
                 devMode('info', `Checking Device - User Agent: ${navigator.userAgent}`);
                 return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             };
+            const checkIphone = () => {
+                devMode('info', 'Checking id device type is iPhone');
+                return /iPhone/i.test(navigator.userAgent);
+            };
             const overlayObj = document.getElementById(options.overlay);
             if (overlayObj === null) {
                 throw new Error('No overlay element exists');
             } else {
-                orientation = screen.orientation.angle;
+                if (checkIphone()) {
+                    orientation = window.orientation;
+                } else {
+                    orientation = screen.orientation.angle;
+                }
                 setOverlayStyling(overlayObj);
                 checkOrientation(overlayObj);
                 window.addEventListener('orientationchange', () => {
-                    orientation = screen.orientation.angle;
+                    if (checkIphone()) {
+                        orientation = window.orientation;
+                    } else {
+                        orientation = screen.orientation.angle;
+                    }
                     checkOrientation(overlayObj);
                 });
             }
