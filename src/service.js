@@ -35,7 +35,7 @@ const orientationService = (options) => {
                     if (checkDeviceType())
                         try {
                             startService(overlay);
-                        } catch (e){
+                        } catch (e) {
                             devMode('error', e);
                         }
                 } else {
@@ -74,6 +74,7 @@ const orientationService = (options) => {
                 elm.style.top = "0";
                 elm.style.width = "100%";
                 elm.style.height = "100%";
+                elm.style.zIndex = "1";
                 elm.style.background = options.bgColor;
             };
             const checkDeviceType = () => {
