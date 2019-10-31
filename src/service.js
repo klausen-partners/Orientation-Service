@@ -48,7 +48,7 @@ const orientationService = (options) => {
                 }
             };
             const startService = (overlay) => {
-                const path = window.location.pathname;
+                const path = window.location.pathname + window.location.hash;
                 devMode('info', `Current path: ${path}`);
                 if (options.landscapePages.includes(path) && isLandscape()) {
                     devMode('log', 'This page requires landscape and is in landscape');
